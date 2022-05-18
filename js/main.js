@@ -10,9 +10,10 @@ if (etaPasseggero < 18) {
     discount = 40 / 100;
 }
 
-const prezzoFinale = prezzoBiglietto - prezzoBiglietto * discount;
+const prezzoCalcolato = prezzoBiglietto - prezzoBiglietto * discount;
+const prezzoFinale = prezzoCalcolato.toFixed(2);
 
 const spanTicket = document.getElementById('ticket')
-spanTicket.innerHTML = `<strong>La tua età è:</strong> ${etaPasseggero}<br>
-                        <strong>I chilometri della tratta sono:</strong> ${kmViaggio}<br>
-                        <strong>Il prezzo del biglietto è:</strong> ${prezzoFinale}`
+spanTicket.innerHTML = `<strong>La tua età è:</strong> ${etaPasseggero} anni<br>
+                        <strong>I chilometri della tratta sono:</strong> ${kmViaggio} km<br>
+                        <strong>Il prezzo del biglietto è:</strong> ${prezzoFinale} €`
