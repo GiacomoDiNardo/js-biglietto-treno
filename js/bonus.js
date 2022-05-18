@@ -22,15 +22,15 @@ if ((isNaN(numKm) || numKm < 5 || numKm > 100) && (isNaN(numEta))) {
                             <strong>Il prezzo del biglietto è:</strong> *Controlla i valori precedenti`;
 } else if (!isNaN(numEta) && numEta < 18) {
     discount = (20 / 100);
-    const prezzoCalcolato = prezzoBiglietto - prezzoBiglietto * discount;
-    const prezzoFinale = prezzoCalcolato.toFixed(2);
+    let prezzoCalcolato = prezzoBiglietto - prezzoBiglietto * discount;
+    let prezzoFinale = prezzoCalcolato.toFixed(2);
     spanTicket.innerHTML = `<strong>La tua età è:</strong> ${numEta} anni<br>
                             <strong>I chilometri della tratta sono:</strong> ${numKm} km<br>
                             <strong>Il prezzo del biglietto è:</strong> ${prezzoFinale} €`;
 } else if (!isNaN(numEta) && numEta > 65) {
     discount = 40 / 100;
-    const prezzoCalcolato = prezzoBiglietto - prezzoBiglietto * discount;
-    const prezzoFinale = prezzoCalcolato.toFixed(2);
+    let prezzoCalcolato = prezzoBiglietto - prezzoBiglietto * discount;
+    let prezzoFinale = prezzoCalcolato.toFixed(2);
     spanTicket.innerHTML = `<strong>La tua età è:</strong> ${numEta} anni<br>
                             <strong>I chilometri della tratta sono:</strong> ${numKm} km<br>
                             <strong>Il prezzo del biglietto è:</strong> ${prezzoFinale} €`;
